@@ -1,0 +1,112 @@
+header {
+    background-color: var(--main-background-color);
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 1;
+}
+
+.header__main {
+    display: flex;
+    padding: 10px 10px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-logo-stat {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header__logo {
+    width: 175px;
+}
+
+.block__stat {
+    display: flex;
+}
+
+.block__stat p {
+    color: var(--main-text-color);
+    font-family: var(--main-font-family);
+    font-size: var(--main-font-size);
+    font-weight: 400;
+    letter-spacing: 0em;
+}
+
+.social-number {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    margin: 0px 8px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.social-icons a i {
+    width: 32px;
+    height: 32px;
+    background: var(--social-background-color);
+    color: var(--main-background-color);
+    border-radius: 16%;
+    text-align: center;
+    align-self: center;
+    align-content: center;
+}
+
+.social-icons a i:hover {
+    background: red;
+    background: var(--main-background-color);
+    color: var(--social-background-color);
+    cursor: pointer;
+}
+
+.social-icons {
+    display: flex;
+}
+
+@keyframes glossy_shine {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+.social-number a.call {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: var(--main-font-family);
+    color: var(--main-background-color);
+    background: linear-gradient(194deg, rgb(190, 148, 48), rgb(247, 241, 153));
+    overflow: hidden;
+    transition: background 0.3s ease-in-out;
+}
+
+.social-number a.call::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.15) 100%);
+    transform: skewX(-45deg);
+    animation: glossy_shine 1.5s infinite ease-in-out;
+}
+
+.social-number a.call:hover {
+    cursor: pointer;
+}
